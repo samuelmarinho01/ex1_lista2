@@ -27,18 +27,17 @@ package lista02;
 
 import java.lang.Math;
 
-
 public class Seno {
 	
 	
 	public double calculaSeno(double x) {
 		double seno,termo, precisao;
-		int n;
+
 		seno=termo=x;
 		precisao = 1/(1000000);
 		
 		
-		for(int k=1;termo>precisao;k++) {
+		for(int k=1;Math.abs(termo)>precisao;k++) {
 			termo = (termo*((-1)*x)*x)/((2*k*(2*(k) +1)));
 			seno=seno+termo;
 			
