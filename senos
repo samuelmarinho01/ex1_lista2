@@ -1,0 +1,53 @@
+package lista2;
+
+public class Lista2 {
+
+	public static void main(String[] args) {
+		double a;
+		double b;
+		// TODO Auto-generated method stub
+		Seno x = new Seno();
+		a=x.calculaSeno(3.14);
+		b= x.computaSeno(3.14);
+		System.out.println("os valores de seno sao "+ a+ " "+b);
+		
+		
+		
+	}
+
+}
+
+
+package lista2;
+
+import java.lang.Math;
+
+
+public class Seno {
+	
+	
+	public double calculaSeno(double x) {
+		double seno,termo;
+		int n;
+		seno=termo=x;
+		n=100;
+		
+		for(int k=1;k<n;k++) {
+			termo = (termo*((-1)*x)*x)/((2*k*(2*(k) +1)));
+			seno=seno+termo;
+			
+		}
+		System.out.println("ok");
+		return seno;
+
+}
+	public double computaSeno(double x) {
+		double seno;
+		
+		seno = Math.sin(x);
+		
+		return seno;
+		
+	}
+	
+}
